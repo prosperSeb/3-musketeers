@@ -11,7 +11,7 @@
 
 ## Installation
 
-Before using the function you need to execute a bunch of command to install required library.
+Before using the program you need to execute a bunch of command to install required library.
 
 ```sh
 ❯ cd /path/to/workspace/3-musketeers/currency
@@ -26,16 +26,17 @@ What those line do ?
 
 1. The way to use it
 
-	The program is here to convert the amount of currency that you want to an other.
+	The program convert the amount of currency that you want to an other.
 	
-	To do so you have to give the alount then the initial currency and then the convert to currency.
+	To do so you have to give the amount then the initial currency and then the convert to currency.
 ```sh
+ #Example
 ❯ node cli.js 10 EUR USD
  #It wil convert 10 euro to US dollars
  
 ```
 
-To know the available currency you can execute these command
+	To know the available currency you can execute these command
 	
 	
 ```sh
