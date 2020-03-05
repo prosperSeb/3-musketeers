@@ -32,17 +32,18 @@ What those line do ?
 ```sh
 ❯ node cli.js 10 EUR USD
  #It wil convert 10 euro to US dollars
-
+ 
 ```
 
-	To know the available currency you can execute these command
+To know the available currency you can execute these command
+	
 	
 ```sh
 ❯ node cli.js --all_currency
 
 ```
 
-	It will display a list of all available currency
+It will display a list of all available currency
 
 2. Help() command 
 
