@@ -13,7 +13,19 @@
 
 Make sure you have installed [Node.js](https://nodejs.org/en/download/)
 
-Before using the program you need to execute a bunch of command to install the required library.
+1. Fork the project via `github`
+
+![fork](./fork.png)
+</li>
+
+2. Clone your forked repository project `https://github.com/YOUR_USERNAME/3-musketeers`
+
+```sh
+❯ cd /path/to/workspace
+❯ git clone git@github.com:YOUR_USERNAME/3-musketeers.git
+```
+
+3. Before using the program you need to execute a bunch of command to install the required library.
 
 ```sh
 ❯ cd /path/to/workspace/3-musketeers/currency
