@@ -15,7 +15,7 @@ Make sure you have installed [Node.js](https://nodejs.org/en/download/)
 
 1. Fork the project via `github`
 
-![fork](./fork.png)
+![fork](../fork.png)
 </li>
 
 2. Clone your forked repository project `https://github.com/YOUR_USERNAME/3-musketeers`
