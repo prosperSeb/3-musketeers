@@ -23,24 +23,24 @@ function help () {
 async function test (){
 	try{
 
-const RATES_URL = 'https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html';
-const response = await axios(RATES_URL);
-const {data, status} = response;
-var $ = cheerio.load(data);
-var i =1;
-var str = 'test';
-console.log('\n');
-while($('#ecb-content-col > main > div.forextable > table > tbody > tr:nth-child('+i+')').text().length>0){
-	var str = $('#ecb-content-col > main > div.forextable > table > tbody > tr:nth-child('+i+')').text()
-	st = str.split(' ')[1].split('\n')[1]
-	console.log(st)
-	i++;
-}
-console.log('BTC');
+		const RATES_URL = 'https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html';
+		const response = await axios(RATES_URL);
+		const {data, status} = response;
+		var $ = cheerio.load(data);
+		var i =1;
+		var str = 'test';
+		console.log('\n');
+		while($('#ecb-content-col > main > div.forextable > table > tbody > tr:nth-child('+i+')').text().length>0){
+			var str = $('#ecb-content-col > main > div.forextable > table > tbody > tr:nth-child('+i+')').text();
+			st = str.split(' ')[1].split('\n')[1];
+			console.log(st);
+			i++;
+		}
+		console.log('BTC');
 	}
 	catch(e) {
-      console.error(e);
-      process.exit(1);
+		console.error(e);
+		process.exit(1);
     }
 	process.exit(0)
 }
