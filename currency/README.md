@@ -65,7 +65,7 @@ This will show u hox to use the code.
 You can performe several test by entering the following command.
 
 
-All the test code is available in the index.test.js.
+All the test code is available in the [index.test.js](3-musketeers/currencyindex.test.js)
 ```sh
 ❯ npm test
 
