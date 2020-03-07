@@ -11,11 +11,9 @@
 
 ## Installation
 
-Make sure you have installed Node.js
+Make sure you have installed [Node.js](https://nodejs.org/en/download/)
 
-[Node.js download link](https://nodejs.org/en/download/)
-
-Before using the program you need to execute a bunch of command to install required library.
+Before using the program you need to execute a bunch of command to install the required library.
 
 ```sh
 ❯ cd /path/to/workspace/3-musketeers/currency
@@ -52,7 +50,7 @@ It will display a list of all available currency
 
 2. Help() command 
 
-	If tou need any help during your utilisation you can write this command line
+	If tou need any help during your utilisation you can write this commands
 	
 ```sh
 ❯ node cli.js --help
