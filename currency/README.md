@@ -11,6 +11,10 @@
 
 ## Installation
 
+Make sure you have installed Node.js
+
+[a link](https://nodejs.org/en/download/)
+
 Before using the program you need to execute a bunch of command to install required library.
 
 ```sh
