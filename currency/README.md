@@ -50,7 +50,7 @@ What those line do ?
  
 ```
 
-	To know all the available currency you can execute this command
+To know all the available currency you can execute this command
 	
 	
 ```sh
