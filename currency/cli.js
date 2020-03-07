@@ -48,7 +48,7 @@ async function start (opts) {
   try {
     const {amount, from, to} = opts;
     const result = await currency(opts);
-
+	
     spinner.stop();
     console.log(`${amount} ${from} = ${result} ${to}`);
   } catch (error) {

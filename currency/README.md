@@ -56,3 +56,13 @@ It will display a list of all available currency
 ```
 This will show u hox to use the code.
 
+
+## Test
+You can performe several test by entering the following command.
+
+
+All the test code is available in the index.test.js.
+```sh
+❯ npm test
+
+```

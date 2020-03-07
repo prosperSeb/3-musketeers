@@ -1,4 +1,5 @@
 const nock = require('nock');
+const index = require('./index');
 
 beforeEach(() => {
   nock('https://api.exchangeratesapi.io')
@@ -40,37 +41,101 @@ beforeEach(() => {
 });
 
 test('convert 1 USD to EUR', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+	const opts = {
+		'amount':1,
+		'from': ('USD').toUpperCase(),
+		'to': ('EUR').toUpperCase()
+	};
+	const result = await index(opts);
+	var num = 0.899;
+	expect(result).toBe(num);
 });
 
 test('convert 1 USD to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+	const opts = {
+		'amount':1,
+		'from': ('USD').toUpperCase(),
+		'to': ('USD').toUpperCase()
+	};
+	const result = await index(opts);
+	var num = 1;
+	expect(result).toBe(num);
 });
 
 test('convert 1 EUR to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+	const opts = {
+		'amount':1,
+		'from': ('EUR').toUpperCase(),
+		'to': ('USD').toUpperCase()
+	};
+	const result = await index(opts);
+	var num = 1.1122;
+	expect(result).toBe(num);
 });
-
 test('convert 1 BTC to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+	const opts = {
+		'amount':1,
+		'from': ('BTC').toUpperCase(),
+		'to': ('USD').toUpperCase()
+	};
+	const result = await index(opts);
+	var num = 8944.49;
+	expect(result).toBe(num);
 });
 
 test('convert 1 BTC to EUR', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+	const opts = {
+		'amount':1,
+		'from': ('BTC').toUpperCase(),
+		'to': ('EUR').toUpperCase()
+	};
+	const result = await index(opts);
+	var num = 8048.11;
+	expect(result).toBe(num);
 });
 
 test('convert without arguments', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+	const opts = {
+		'amount':1,
+		'from': ('USD').toUpperCase(),
+		'to': ('BTC').toUpperCase()
+	};
+	const result = await index(opts);
+	var num = 1/8944.49;
+	expect(result).toBe(num);
 });
 
 test('convert with amount only', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+	const opts = {
+		'amount':10,
+		'from': ('USD').toUpperCase(),
+		'to': ('BTC').toUpperCase()
+	};
+	const result = await index(opts);
+	var num = 10/8944.49;
+	
+	expect(result.toString().includes(num.toString())).toBe(true);
 });
 
-test('convert with amount and (from) currency only', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+test('convert with amount(10) and (from) currency only(EUR)', async () => {
+	const opts = {
+		'amount':10,
+		'from': ('EUR').toUpperCase(),
+		'to': ('BTC').toUpperCase()
+	};
+	var num = 10/8048.11;
+	const result = await index(opts);
+	
+	expect(result.toString().includes(num.toString())).toBe(true);
 });
 
 test('convert without a correct `from` or `to` currency value', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const opts = {
+		'amount':10,
+		'from': ('ERU').toUpperCase(),
+		'to': ('ANY').toUpperCase()
+	};
+	expect(index(opts)).rejects.toEqual(new Error('Please specify a valid `from` and/or `to` currency value!'))
 });
+
+
