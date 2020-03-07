@@ -29,17 +29,20 @@ const {data, status} = response;
 var $ = cheerio.load(data);
 var i =1;
 var str = 'test';
+console.log('\n');
 while($('#ecb-content-col > main > div.forextable > table > tbody > tr:nth-child('+i+')').text().length>0){
 	var str = $('#ecb-content-col > main > div.forextable > table > tbody > tr:nth-child('+i+')').text()
 	st = str.split(' ')[1].split('\n')[1]
 	console.log(st)
 	i++;
 }
-process.exit(0)
-	}catch(e) {
+console.log('BTC');
+	}
+	catch(e) {
       console.error(e);
       process.exit(1);
     }
+	process.exit(0)
 }
 
 const spinner = ora('Fetching exchange data..');
